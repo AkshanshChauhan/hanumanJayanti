@@ -1,0 +1,106 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    transition-duration: 0.3s;
+}
+
+html {
+    background-color: #26145E;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #26145E;
+}
+
+.chakar {
+    width: 300px;
+    mix-blend-mode: lighten;
+    position: absolute;
+    z-index: 1;
+}
+
+@keyframes chakar {
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.hanumanji {
+    width: 300px;
+    position: relative;
+    z-index: 2;
+}
+
+.hanumanji:hover {
+    transform: scaleX(110%) scaleY(110%);
+}
+
+button {
+    padding: 10px;
+    outline: 0px;
+    border: 0px;
+    width: 100px;
+    position: relative;
+    z-index: 4;
+    border-radius: 5px;
+}
+
+.controls {
+    position: absolute;
+    margin-top: 500px;
+}
+
+button:hover {
+    background-color: #381e86;
+    color: white;
+    cursor: pointer;
+}
+
+.nonActive {
+    transform: scaleX(0%);
+    display: none;
+}
+
+.active {
+    transform: scaleX(100%);
+}
+
+.nav {
+    position: absolute;
+    width: calc(90vw);
+    overflow: hidden;
+    height: 20px;
+    margin: auto;
+    padding: 5px;
+}
+
+.nav p {
+    animation: notice 60s cubic-bezier(1, 1, 1, 1) 0s infinite;
+    color: white;
+    width: max-content;
+}
+
+@keyframes notice {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media (max-width: 700px) {
+    .hanumanji {
+        width: 70vw;
+        max-width: 300px;
+    }
+    .chakar {
+        width: 70vw;
+        max-width: 300px;
+    }
+}
